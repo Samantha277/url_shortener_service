@@ -1,4 +1,4 @@
 {
     "mongoURI": "mongodb+srv://sam:Greatanchovies9923!@goto.ycpuwbt.mongodb.net/?retryWrites=true&w=majority",
-    "baseUrl" : "http://localhost:5000"
+    "baseUrl" : "https://goto-81tb.onrender.com"
 }
