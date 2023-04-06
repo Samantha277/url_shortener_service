@@ -32,7 +32,7 @@ router.post('/shorten', async (req, res) => {
             if(url){
                 res.json(url);
             } else{
-                const shortUrl = 'goto/'+urlCode;
+                const shortUrl = urlCode;
                 url = new Url({
                     longUrl,
                     shortUrl,
