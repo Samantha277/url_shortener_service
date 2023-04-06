@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
     const shortUrls = await Url.find();
     res.render('index', {shortUrls: shortUrls})
 });
-
+//added mongodb to render
 //send url creation as post request
 // app.post('/shortUrls', async (req, res) => {
 //     const urlCode = shortid.generate();
