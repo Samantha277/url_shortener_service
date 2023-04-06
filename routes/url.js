@@ -41,7 +41,8 @@ router.post('/shorten', async (req, res) => {
                 });
 
                 await url.save();
-                res.json(url);
+                // res.json(url);
+                res.redirect('/');
             }
         }catch(err){
             console.error(err);
@@ -51,5 +52,24 @@ router.post('/shorten', async (req, res) => {
         res.status(401).json('Invalid long url');
     }
 });
+
+// router.post('/shortUrls', async (req, res) => {
+//     const urlCode = shortid.generate();
+//     const shortUrl = "http://localhost:5000/goto/"+urlCode;
+//     const longUrl = req.body.longUrl;
+//     // await url.create({ longUrl: req.body.longUrl, shortUrl, urlCode, date: new Date()})
+//     let url = await Url.findOne({longUrl});
+
+//         url = new Url({
+//         longUrl: req.body.longUrl,
+//         shortUrl,
+//         urlCode,
+//         date: new Date()
+//     });
+
+//     await url.save();
+//     // await url.save(); 
+//     res.redirect('/');
+// });
 
 module.exports = router;
