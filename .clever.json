@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_c464924d-9cf1-460b-929e-968660936863",
+      "org_id": "user_42ae3816-89c8-4c18-a267-578807bf25fd",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_c464924d-9cf1-460b-929e-968660936863.git",
+      "name": "goto",
+      "alias": "goto"
+    }
+  ]
+}

@@ -13,9 +13,11 @@ router.post('/shorten', async (req, res) => {
 
     console.log("Request is: ", req.body);
     // console.log("Result is: ", res);
-    const { longUrl }  = req.body
+    const { longUrl }  = req.body;
+    const shortUrl = req.body.shortUrl;
     const baseUrl = config.get('baseUrl');
    
+    console.log("long url: ". longUrl);
 
     //Check base url
     if(!validUrl.isUri(baseUrl)){
@@ -23,7 +25,8 @@ router.post('/shorten', async (req, res) => {
     }
 
     // Create url code
-    const urlCode = shortid.generate();
+    const urlCode = shortUrl;
+    // const urlCode = shortid.generate();
     // console.log("Long url is: ",  longUrl);
     // Check long url
     if(validUrl.isUri(longUrl)){
@@ -32,7 +35,7 @@ router.post('/shorten', async (req, res) => {
             if(url){
                 res.json(url);
             } else{
-                const shortUrl = urlCode;
+                // let shortUrl = await Url.findOne({shortUrl});
                 url = new Url({
                     longUrl,
                     shortUrl,
