@@ -14,7 +14,7 @@ router.post('/shorten', async (req, res) => {
     console.log("Request is: ", req.body);
     // console.log("Result is: ", res);
     const { longUrl }  = req.body;
-    const shortUrl = req.body.shortUrl;
+    const shortUrl = req.body.shortUrl.toLowerCase();
     const baseUrl = config.get('baseUrl');
    
     console.log("long url: ". longUrl);
